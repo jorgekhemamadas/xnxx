@@ -61,12 +61,12 @@ async function maintenance() {
     function time(){
       setInterval(()=>{
         run()
-      }, 10); // Change the interval time between requests (in milliseconds)
+      }, 0); // Change the interval time between requests (in milliseconds)
     }
 
     async function th(){
       if (cluster.isMaster){
-        for (let u=0;u<8;u++){
+        for (let u=0;u<10;u++){
           cluster.fork()
           console.log('BY EES')
         }
